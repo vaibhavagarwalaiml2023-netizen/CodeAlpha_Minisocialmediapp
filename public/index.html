@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mini Social - Share Your Thoughts</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- Auth Modal -->
+  <div id="auth-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="forms">
+        <div id="login-form">
+          <h3>Welcome Back 👋</h3>
+          <input id="login-email" placeholder="Email address" type="email">
+          <input id="login-password" type="password" placeholder="Password">
+          <button id="btn-login" class="btn-primary" style="width:100%; padding:12px;">Sign In</button>
+          <p>Don't have an account? <a href="#" id="show-register">Create one</a></p>
+        </div>
+
+        <div id="register-form" style="display:none;">
+          <h3>Join Mini Social 🚀</h3>
+          <input id="reg-username" placeholder="Choose a username">
+          <input id="reg-email" placeholder="Email address" type="email">
+          <input id="reg-password" type="password" placeholder="Create a password">
+          <button id="btn-register" class="btn-primary" style="width:100%; padding:12px;">Sign Up</button>
+          <p>Already have an account? <a href="#" id="show-login">Sign in</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Profile Modal -->
+  <div id="profile-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="profile-detail"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>📱 Mini Social</h2>
+      <div id="sidebar-nav">
+        <button class="nav-item active" id="nav-feed">🏠 Feed</button>
+        <button class="nav-item" id="nav-create">✍️ Create Post</button>
+        <button class="nav-item" id="nav-my-profile">👤 My Profile</button>
+      </div>
+      <div id="auth-controls"></div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <h1>Mini Social 💬</h1>
+        <div style="color: #999; font-size: 14px;" id="header-user"></div>
+      </header>
+
+      <!-- Create Post Section -->
+      <section id="create-post-section" class="card" style="display:none;">
+        <h3>✨ What's on your mind?</h3>
+        <textarea id="post-text" placeholder="Share your thoughts..."></textarea>
+        <input id="post-image" placeholder="Image URL (optional)">
+        <button id="btn-create-post" class="btn-primary">Post Now</button>
+      </section>
+
+      <!-- Feed Section -->
+      <section id="feed" class="card">
+        <h3>📰 Feed</h3>
+        <div id="posts" style="margin-top: 15px;"></div>
+      </section>
+
+      <!-- My Profile Section -->
+      <section id="my-profile-section" class="card" style="display:none;">
+        <h3>👤 My Profile</h3>
+        <div id="my-profile"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
